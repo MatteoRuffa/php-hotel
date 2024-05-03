@@ -23,11 +23,21 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container d-flex justify-content-center flex-column align-items-center">
             <div class="title text-center m-3">
                 <h1>Choise your Hotel, Choise your dream</h1>
             </div>
-            
+            <form class="d-flex flex-column align-items-center p-3 " action="index.php" method="GET">
+                <select class="form-control me-2" name="dataParking">
+                    <option value="all">Tutti gli Hotel</option>
+                    <option value="0">No parking</option>
+                    <option value="1">Hotel con Parking</option>
+                </select>
+                <div class="p-3"> 
+                    <button type="submit" class="btn btn-outline-success">Search</button>
+                </div>
+                
+            </form>
         </div>
     </header>
     
