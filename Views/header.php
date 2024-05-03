@@ -24,7 +24,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="title">
+            <div class="title text-center m-3">
                 <h1>Choise your Hotel, Choise your dream</h1>
             </div>
             

@@ -1,11 +1,12 @@
 <?php 
 include __DIR__ ."/Models/hotels.php";
-include __DIR__ ."/View/header.php";
+include __DIR__ ."/Views/header.php";
 ?>
-<main>
-
-
+<main class="container">
+  <?php
+  include __DIR__ . "/Views/tables.php";
+  ?>
 </main>
 <?php
-include __DIR__ ."/View/footer.php";
+include __DIR__ ."/Views/footer.php";
 ?>
