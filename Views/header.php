@@ -33,11 +33,16 @@
                     <option value="0">No parking</option>
                     <option value="1">Hotel con Parking</option>
                 </select>
+                <select class="form-control me-2" name="dataStars">
+                    <option value="all">Tutti gli Hotel</option>
+                    <option value="0">meno di 3 stelle</option>
+                    <option value="1">più di 3 stelle</option>
+                </select>
                 <div class="p-3"> 
                     <button type="submit" class="btn btn-outline-success">Search</button>
                 </div>
-                
             </form>
+            
         </div>
     </header>
     
