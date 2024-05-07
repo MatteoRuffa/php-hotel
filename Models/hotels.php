@@ -82,27 +82,4 @@
 
     ];
 
-    function getHotels($hotels) {
-        $hotelsParking = $hotels;
-        if (!empty($_GET['dataParking']) || (isset($_GET['dataParking']) && $_GET['dataParking'] == 0)) {
-            $dataParking = $_GET['dataParking'];
-            $hotelsParking = array_filter($hotelsParking, function ($hotel) use ($dataParking) {
-                return $hotel['parking'] == $dataParking || $dataParking == "all";
-            });
-        } 
     
-        if (!empty($_GET['dataStars']) || (isset($_GET['dataStars']) && $_GET['dataStars'] == 0)) {
-            $dataStars = $_GET['dataStars'];
-            $hotelsParking = array_filter($hotelsParking, function ($hotel) use ($dataStars) {
-                if ($dataStars == "0") {
-                    return $hotel['vote'] < 3;
-                } elseif ($dataStars == "1") {
-                    return $hotel['vote'] >= 3;
-                } else {
-                    return true;
-                }
-            });
-        }
-    
-        return $hotelsParking; 
-    }
