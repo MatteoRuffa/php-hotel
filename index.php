@@ -1,4 +1,5 @@
 <?php 
+include __DIR__ ."/Views/header.php";
 include __DIR__ ."/controllers/hotels.php";
 
 if (!empty($_GET['dataParking']) || (isset($_GET['dataParking']) && $_GET['dataParking'] == 0)) {
@@ -10,7 +11,7 @@ if (!empty($_GET['dataParking']) || (isset($_GET['dataParking']) && $_GET['dataP
     $hotelsParking = $hotels;
 }
 
-include __DIR__ ."/Views/header.php";
+
 ?>
 <main class="container">
   <?php
