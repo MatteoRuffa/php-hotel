@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +35,7 @@
             <div class="title text-center m-3">
                 <h1>Choise your Hotel, Choise your dream</h1>
             </div>
+            <?php if (isset($_SESSION['userId'])): ?>
             <form class="d-flex align-items-center p-3 " action="index.php" method="GET">
                 <select class="form-control me-2" name="dataParking">
                     <option value="all">Tutti gli Hotel</option>
@@ -42,8 +51,10 @@
                     <button type="submit" class="btn btn-outline-success">Search</button>
                 </div>
             </form>
-            
+            <form action="logout.php" method="POST">
+                <button type="submit" class="btn btn-outline-danger">Logout</button>
+            </form>
+            <?php endif; ?>
         </div>
     </header>
-    
     
